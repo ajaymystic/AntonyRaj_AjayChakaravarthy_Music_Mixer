@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Instrument Mixer</title>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  <header>
+    <h1>Indian Instrument Mixer</h1>
+  </header>
+
+  <main class="container">
+    <section class="drop-image-area">
+      <h2 class="hidden">Instrument Drop Area</h2>
+      <img src="images/drag-img.png" alt="Instrument Stage" class="drop-background">
+
+      <div class="target-zone" id="zone1"></div>
+      <div class="target-zone" id="zone2"></div>
+      <div class="target-zone" id="zone3"></div>
+      <div class="target-zone" id="zone4"></div>
+      <div class="target-zone" id="zone5"></div>
+      <div class="target-zone" id="zone6"></div>
+    </section>
+
+    <section class="instruments">
+      <h2 class="hidden">Available Instruments</h2>
+      <div class="label" data-trackref="tabla" draggable="true"><img src="images/tabla.svg" alt="Tabla"></div>
+      <div class="label" data-trackref="sitar" draggable="true"><img src="images/sitar.svg" alt="Sitar"></div>
+      <div class="label" data-trackref="bansuri" draggable="true"><img src="images/bansuri.svg" alt="Bansuri"></div>
+      <div class="label" data-trackref="mridangam" draggable="true"><img src="images/mridangam.svg" alt="Mridangam"></div>
+      <div class="label" data-trackref="shehnai" draggable="true"><img src="images/shehnai.svg" alt="Shehnai"></div>
+      <div class="label" data-trackref="veena" draggable="true"><img src="images/veena.svg" alt="Veena"></div>
+    </section>
+
+    <p class="instruction-text">Drag the instrument and drop in the picture to play</p>
+
+    <section class="controls">
+      <h2 class="hidden">Audio Controls</h2>
+      <img class="controls-btn" id="playButton" src="images/play-button.svg" alt="Play">
+      <img class="controls-btn" id="pauseButton" src="images/pause-button.svg" alt="Pause">
+      <img class="controls-btn" id="refreshButton" src="images/refresh-button.png" alt="Refresh">
+      <input id="slider" type="range" min="0" max="100" value="30" />
+    </section>
+
+    <!-- Audio tracks -->
+    <audio class="audio-player" data-trackref="tabla" loop></audio>
+    <audio class="audio-player" data-trackref="sitar" loop></audio>
+    <audio class="audio-player" data-trackref="bansuri" loop></audio>
+    <audio class="audio-player" data-trackref="mridangam" loop></audio>
+    <audio class="audio-player" data-trackref="shehnai" loop></audio>
+    <audio class="audio-player" data-trackref="veena" loop></audio>
+  </main>
+
+  <footer>
+    <p>&copy; Indian Instrument Mixer</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
